@@ -1,0 +1,107 @@
+.intro-animation {
+  -webkit-animation: introAnimation 7250ms linear;
+          animation: introAnimation 7250ms linear;
+}
+
+@-webkit-keyframes introAnimation {
+  0% {
+    -webkit-transform: scale3d(0, 0, 0);
+            transform: scale3d(0, 0, 0);
+  }
+  1% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  99% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  100% {
+    -webkit-transform: scale3d(15, 15, 15);
+            transform: scale3d(15, 15, 15);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+}
+
+@keyframes introAnimation {
+  0% {
+    -webkit-transform: scale3d(0, 0, 0);
+            transform: scale3d(0, 0, 0);
+  }
+  1% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  99% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  100% {
+    -webkit-transform: scale3d(15, 15, 15);
+            transform: scale3d(15, 15, 15);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.header svg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.header svg .leak-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale3d(0, 0, 0);
+          transform: scale3d(0, 0, 0);
+}
+
+.header svg #mask-bg {
+  -webkit-mask: url("#mask");
+          mask: url("#mask");
+}
+
+.header .video {
+  width: 100%;
+  height: 100%;
+}
+
+.header .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 0;
+}

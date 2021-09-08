@@ -1,0 +1,20 @@
+.intro-animation {
+  animation: introAnimation 7250ms linear;
+}
+
+@keyframes introAnimation {
+  0% {
+    transform: scale3d(0, 0, 0);
+  }
+  1% {
+    transform: scale3d(1, 1, 1);
+  }
+  99% {
+    transform: scale3d(1.1, 1.1, 1.1);
+    filter: blur(0);
+  }
+  100% {
+    transform: scale3d(15, 15, 15);
+    filter: blur(10px);
+  }
+}
