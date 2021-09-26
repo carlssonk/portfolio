@@ -101,7 +101,7 @@ export const handleProjectInfo = () => {
     DOM.label.innerText = data.name;
     DOM.type.innerText = data.type;
     DOM.date.innerText = data.date;
-    DOM.description.innerText = data.description;
+    DOM.description.innerHTML = data.description;
     DOM.website.href = data.links.website;
     DOM.github.href = data.links.github;
     DOM.background.src = data.background;
@@ -111,7 +111,7 @@ export const handleProjectInfo = () => {
     DOM.label.innerText = "";
     DOM.type.innerText = "";
     DOM.date.innerText = "";
-    DOM.description.innerText = "";
+    DOM.description.innerHTML = "";
     DOM.website.href = "";
     DOM.github.href = "";
     DOM.background.src = "";

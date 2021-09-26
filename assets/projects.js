@@ -26,12 +26,23 @@ export default
     "name": "Emote Racer (Battle Royale)",
     "type": "Project Type - Personal",
     "date": "2021-02-10",
-    "description": "Emote Racer is a an online multiplayer Twitch Emote typing/guessing game, where you try to guess the name of a given emote. It's similar to typeracer.com, but instead of typing out a given paragraph, you are typing names of different emotes. This game has 3 different gamemodes: Battle Royale, 1 VS 1 and Practice Alone. You also have your own profile where you can buy avatars by collecting 'YEP Coins' that is the game currency, you earn coins by winning online games (excluding when you are playing agains a friend). All progress is stored via Local/Web storage.\nI built Emote Racer using JavaScript, Sass, Express.js and Socket.io for real time communication.",
+    "description": "Emote Racer is a an online multiplayer <a href='https://www.twitch.tv/creatorcamp/en/learn-the-basics/emotes/' target='_blank'>Twitch Emote</a> typing/guessing game, where you try to guess the name of a given emote. It's similar to <a href='https://play.typeracer.com/' target='_blank'>typeracer.com</a>, but instead of typing out a given paragraph, you are typing names of different emotes. This game has 3 different gamemodes: Battle Royale, 1 VS 1 and Practice Alone. You also have your own profile where you can buy avatars by collecting 'YEP Coins' that is the game currency, you earn coins by winning online games (excluding when you are playing agains a friend). All progress is stored via Local/Web storage.\nI built Emote Racer using JavaScript, Sass, Express.js and Socket.io for real time communication.",
     "links": {
       "website": "https://emote-racer.herokuapp.com/",
       "github": "https://github.com/CarlssonK/Emote-Racer"
     },
     "background": "https://camo.githubusercontent.com/d198c6662666606c0fe73a616d31f6c9c6d7618116a422983324a31bdadfcfd9/68747470733a2f2f692e6962622e636f2f564a447051666a2f656d6f746572616365722d73637265656e73686f742e6a7067",
   },
+  "hemnet": {
+    "name": "Hemnet Clone",
+    "type": "Project Type - Personal",
+    "date": "2020-06-29",
+    "description": "Hemnet Clone is a 2020 clone of the Swedish real estate & housing platform <a href='https://www.hemnet.se/' target='_blank'>hemnet.se</a>. Built with VanillaJS and CSS.",
+    "links": {
+      "website": "https://carlssonk.github.io/Hemnet-clone/",
+      "github": "https://github.com/CarlssonK/Hemnet-clone"
+    },
+    "background": "https://camo.githubusercontent.com/13be2bb9f02a0e120c9a89745860bbaa985d7ab48d33ecb52fa82befcd53e702/68747470733a2f2f692e6962622e636f2f39484e7a7a6d722f68656d6e65742e6a7067",
+  }
 
 }
