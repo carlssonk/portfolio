@@ -1,0 +1,42 @@
+:root {
+  --light: #cccccc;
+  --light-alpha: #ffffffcc;
+  // --blue: #104b6d;
+  --blue: #041a27;
+  --blue-alpha: #19afff26;
+  --scroll-width: 8px;
+  --scroll-offset: 0px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  box-shadow: 0 0 0 30px rgb(10, 10, 10) inset !important;
+  border: 1px solid rgb(35, 35, 35) !important;
+  color: white !important;
+  -webkit-text-fill-color: var(--light) !important;
+}

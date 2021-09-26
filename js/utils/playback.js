@@ -1,6 +1,7 @@
+
 setTimeout(() => {
   if (!hasPlayed) handlePlaybackError();
-}, 1000);
+}, 2900);
 
 let hasPlayed = false;
 const handleStartTrack = async (event) => {
@@ -11,44 +12,45 @@ const handleStartTrack = async (event) => {
     video.onplay = null;
 
     // Start
-    let leakText = document.querySelector("[data-js=leak-ext]");
-    if (!leakText) leakText = await retrieveTextElement();
+    let leakTitle = document.querySelector("[data-js=leak-title]");
+    if (!leakTitle) leakTitle = await retrieveTitleElement();
 
-    prepareIntro(leakText);
+    prepareIntro();
   }
 };
 
 const handlePlaybackError = () => {
   const video = document.querySelector("[data-js=video]");
-  const container = document.querySelector("[data-js=svg-text-container]");
+  const container = document.querySelector("[data-js=svg-title-container]");
 
   hasPlayed = true;
-  video.src = "";
+  if(video) video.src = "";
 
-  container.innerHTML = createTextElement();
+  container.innerHTML = createTitleElement();
 
-  const leakText = document.querySelector("[data-js=leak-text]");
+  const leakTitle = document.querySelector("[data-js=leak-title]");
+  leakTitle.style.fill = "#104b6d";
 
-  prepareIntro(leakText);
+  prepareIntroFast();
 };
 
-const retrieveTextElement = async () => {
+const retrieveTitleElement = async () => {
   return await new Promise((resolve) => {
     const interval = setInterval(() => {
-      const leakText = document.querySelector("[data-js=leak-text]");
-      if (leakText) {
+      const leakTitle = document.querySelector("[data-js=leak-title]");
+      if (leakTitle) {
         clearInterval(interval);
-        resolve(leakText);
+        resolve(leakTitle);
       }
     }, 100);
   });
 };
 
-const createTextElement = () => {
+const createTitleElement = () => {
   return `
   <text
-    class="leak-text"
-    data-js="leak-text"
+    class="leak-title"
+    data-js="leak-title"
     x="50%"
     y="50%"
     text-anchor="middle"
@@ -58,9 +60,14 @@ const createTextElement = () => {
   </text>`;
 };
 
-const prepareIntro = (leakText) => {
+const prepareIntro = () => {
+  const titleContainer = document.querySelector("[data-js=title-container]")
   setTimeout(() => {
-    leakText.classList.add("intro-animation");
-    setTimeout(() => initIntro(leakText), 50); // timeout after classList add to prevent font size bug
-  }, 500);
+    titleContainer.classList.add("fade-in")
+  }, 2700);
+};
+
+const prepareIntroFast = () => {
+  const titleContainer = document.querySelector("[data-js=title-container]")
+  titleContainer.classList.add("fade-in")
 };

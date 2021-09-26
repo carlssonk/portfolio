@@ -1,20 +1,96 @@
-.intro-animation {
-  animation: introAnimation 7250ms linear;
+@import "_loader";
+
+
+.fade-in {
+  animation: fadeInUp 500ms cubic-bezier(.3,0,.5,1) forwards;
 }
 
-@keyframes introAnimation {
-  0% {
-    transform: scale3d(0, 0, 0);
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    margin-top: 20px;
   }
-  1% {
-    transform: scale3d(1, 1, 1);
+  to {
+    margin-top: 0px;
+    opacity: 1;
   }
-  99% {
-    transform: scale3d(1.1, 1.1, 1.1);
-    filter: blur(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  100% {
-    transform: scale3d(15, 15, 15);
-    filter: blur(10px);
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.scale-fade-in {
+  display: block !important;
+  animation: scaleFadeIn 400ms forwards;
+}
+
+@keyframes scaleFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale3d(.5,.5,.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale3d(1,1,1);
+  }
+}
+
+.scale-fade-out {
+  display: block !important;
+  animation: scaleFadeOut 400ms forwards;
+}
+
+@keyframes scaleFadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale3d(1,1,1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale3d(.5,.5,.5);
+  }
+}
+
+
+.enable-click-catcher {
+  display: block !important;
+  animation: fadeIn 800ms forwards;
+}
+.disable-click-catcher {
+  display: block !important;
+  animation: fadeOut 400ms forwards;
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+.social-media-list {
+  li {
+    opacity: 0;
+  }
+  li:nth-of-type(1) {
+    animation: fadeIn 800ms 3300ms forwards;
+  }
+  li:nth-of-type(2) {
+    animation: fadeIn 800ms 3450ms forwards;
+  }
+  li:nth-of-type(3) {
+    animation: fadeIn 800ms 3600ms forwards;
   }
 }
