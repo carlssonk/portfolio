@@ -68,12 +68,13 @@
     .project-item-big {
       max-height: unset;
       height: fit-content;
-      min-height: 400px;
+      min-height: 300px;
       .top-bar-wrapper {
         height: 40px;
       }
       .content {
-        min-height: 360px;
+        min-height: 260px;
+        padding: 20px 20px 40px 20px;
         .header {
           letter-spacing: 1px;
           .date::before {
