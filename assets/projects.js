@@ -32,5 +32,6 @@ export default
       "github": "https://github.com/CarlssonK/Emote-Racer"
     },
     "background": "https://camo.githubusercontent.com/d198c6662666606c0fe73a616d31f6c9c6d7618116a422983324a31bdadfcfd9/68747470733a2f2f692e6962622e636f2f564a447051666a2f656d6f746572616365722d73637265656e73686f742e6a7067",
-  }
+  },
+
 }

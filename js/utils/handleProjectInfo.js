@@ -1,7 +1,10 @@
 import projects from "../../assets/projects.js"
-import { populateCard } from "./populateCard.js";
+import { generateCardsDOM } from "./generateCards.js";
 // Handles hover and clicking on the project cards
 export const handleProjectInfo = () => {
+
+  // Generate project cards
+  generateCardsDOM();
   
   const cards = document.querySelectorAll("[data-js=project-item]");
   const projectItemBig = document.querySelector("[data-js=project-item-big]");
@@ -11,9 +14,6 @@ export const handleProjectInfo = () => {
 
   cards.forEach((card) => {
     const icons = card.querySelectorAll("[data-js=project-icon]");
-
-    // Populate card data
-    populateCard(card);
 
     // Listen if user clicked on icon
     icons.forEach((icon) => {
