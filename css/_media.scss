@@ -41,12 +41,14 @@
     .project-item-big {
       max-height: 500px;
       .content {
-        height: calc(100% - 49px);
-        .project-description {
-          padding: 30px;
-          line-height: 20px;
-          letter-spacing: 0.6px;
-          font-size: 14px;
+        height: calc(100% - 50px);
+        .project-description-wrapper {
+          .project-description {
+            padding: 60px 30px 80px 30px;
+            line-height: 20px;
+            letter-spacing: 0.6px;
+            font-size: 14px;
+          }
         }
       }
 
@@ -73,7 +75,8 @@
         height: 40px;
       }
       .content {
-        min-height: 260px;
+        height: unset;
+        min-height: 300px;
         padding: 20px 20px 40px 20px;
         .header {
           letter-spacing: 1px;
@@ -81,12 +84,15 @@
             right: -50px;
           }
         }
-        .project-description {
-          padding: 20px;
-          line-height: unset;
-          letter-spacing: unset;
-          font-size: 12px;
+        .project-description-wrapper {
+          .project-description {
+            padding: 30px;
+            line-height: unset;
+            letter-spacing: unset;
+            font-size: 12px;
+          }
         }
+
         .links-container {
           a i {
             font-size: 16px;
@@ -115,10 +121,13 @@
       }
     }
     .project-item-big {
+      min-height: unset;
+      width: 96%;
       .top-bar-wrapper .top-bar label {
         font-size: 14px;
       }
       .content {
+        min-height: 270px;
         .header {
           padding: 0px;
           font-size: 10px;
@@ -130,11 +139,13 @@
             margin-left: 0px;
           }
         }
-        .project-description {
-          padding: 20px;
-          line-height: unset;
-          letter-spacing: unset;
-          font-size: 12px;
+        .project-description-wrapper {
+          .project-description {
+            padding: 30px;
+            line-height: unset;
+            letter-spacing: unset;
+            font-size: 12px;
+          }
         }
         .links-container {
           bottom: 8px;
@@ -190,8 +201,11 @@
         letter-spacing: unset;
       }
       .content {
-        .project-description {
-          padding: 20px 0;
+        .project-description-wrapper {
+          .project-description {
+            // padding: 20px 0;
+            padding: 30px;
+          }
         }
       }
     }

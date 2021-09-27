@@ -333,6 +333,9 @@ body {
       width: 100%;
       padding: 20px;
       color: var(--light);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
       .header {
         display: flex;
         justify-content: space-between;
@@ -373,15 +376,21 @@ body {
           }
         }
       }
-      .project-description {
-        padding: 80px;
-        line-height: 26px;
-        letter-spacing: 1px;
-        font-size: 14px;
-        a {
-          color: rgb(29, 158, 209);
+      .project-description-wrapper {
+        position: relative;
+        flex-grow: 1;
+        .project-description {
+          position: relative;
+          padding: 80px;
+          line-height: 26px;
+          letter-spacing: 1px;
+          font-size: 14px;
+          a {
+            color: rgb(29, 158, 209);
+          }
         }
       }
+
       .links-container {
         position: absolute;
         width: unset;
