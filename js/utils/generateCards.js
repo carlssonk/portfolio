@@ -11,7 +11,7 @@ export const generateCardsDOM = () => {
         <div class="top-bar-wrapper">
           <div class="top-bar">
             <label data-js="project-label">${x.name}</label>
-            <i class="fas fa-info-circle info-icon"></i>
+            <i tabindex="0" class="fas fa-info-circle info-icon"></i>
           </div>
           <div class="blur"></div>
         </div>

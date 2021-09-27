@@ -27,11 +27,11 @@ export const handleTitlePosition = () => {
     // Handle title offset
     let offset = 100;
     if (width < 576) {
-      offset = 160;
+      offset = 130;
     } else if (width < 768) {
-      offset = 140;
-    } else if (width < 992) {
       offset = 120;
+    } else if (width < 992) {
+      offset = 110;
     }
 
     titleContainer.style.transform = `translate(${(width/2) - (titleWidth/2)}px, ${(height/2 - offset) - (titleHeight/2)}px) scale(${scale.toFixed(3)})`
