@@ -3,6 +3,7 @@ export const handleTitlePosition = () => {
   const main = document.querySelector("main")
   const titleWrapper = document.querySelector("[data-js=title-wrapper]");
   const titleContainer = document.querySelector("[data-js=title-container]");
+  const nav = document.querySelector("[data-js=nav]");
 
   let isCentered = true;
 
@@ -36,12 +37,14 @@ export const handleTitlePosition = () => {
     // Un-center Title
     if(isCentered && posData.top < maxTop) {
       isCentered = false;
-      titleContainer.style.transform = `translate(10px,20px) scale(1)`
+      titleContainer.style.transform = `translate(10px,20px) scale(1)`;
+      nav.style.opacity = "1";
     }
     // Center Title
     if(!isCentered && posData.top > maxTop) {
       isCentered = true;
       centerTitlePos();
+      nav.style.opacity = "0";
     }
   }
   document.addEventListener("scroll", handleScroll)
