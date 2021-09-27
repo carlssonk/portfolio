@@ -17,6 +17,8 @@ export const handleDescriptionVisibility = () => {
     if (coverAmount >= 0 && coverAmount <= 1) {
       const percentage = ((1 - coverAmount) * 100).toFixed(3);
       const descriptionPercentage = parseFloat((coverAmount * 100).toFixed(3));
+      // console.log(percentage)
+      console.log(descriptionPercentage)
 
       description.style.clipPath = `polygon(0 0, 100% 0, 100% ${percentage}%, 0 ${percentage}%)`
 
@@ -33,7 +35,7 @@ export const handleDescriptionVisibility = () => {
       description.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
       descriptionOverlay.style.background = ``
     }
-  } 
+  }
 
   window.addEventListener('scroll', handleVisibility);
   window.addEventListener('resize', handleVisibility);
