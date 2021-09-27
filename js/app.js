@@ -28,8 +28,6 @@ const init = () => {
   }
   setTimeout(() => initScroll(), 3000);
 
-  // Load particles
-  particlesJS.load('particles-js', 'assets/particles.json');
   // Reveal particles when moving mouse
   mouseMoveReveal();
   // Handle title position
@@ -40,6 +38,13 @@ const init = () => {
   // Handle title click
   const title = document.querySelector("[data-js=title-container]");
   title.addEventListener("click", () => window.scrollTo({top: 0, left: 0, behavior: "smooth"}))
+
+  // Handle contact text click
+  const contact = document.querySelector("[data-js=contact]");
+  const form = document.querySelector("[data-js=form]");
+  contact.addEventListener("click", () => {
+    form.scrollIntoView({ behavior: "smooth" });
+  })
 
   // Handle contact form
   // const form = document.querySelector("[data-js=form]");

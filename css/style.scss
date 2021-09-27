@@ -90,7 +90,7 @@ body {
     top: 96%;
     transform: translate3d(-50%,-100%,0);
     color: rgba(255, 255, 255, 0.4);
-    font-size: 50px;
+    font-size: 40px;
     opacity: 0;
     animation: scrollAnim 1s forwards;
     padding: 12px;
@@ -270,10 +270,9 @@ body {
       padding: 0 4px;
       color: var(--light-alpha);
     }
-    .pun {
-      position: relative;
-      font-size: 9px;
-      margin-left: 4px;
+    .contact {
+      color: rgba(40, 132, 185, 0.8);
+      cursor: pointer;
     }
   }
   .overlay {
