@@ -8,11 +8,12 @@ export const handleScrollBtn = () => {
     document.documentElement.scrollTo({top: titleWrapper.offsetHeight - 120, behavior: 'smooth'});
   })
 
+  // console.log("SHOW?")
   setTimeout(() => {
     if(document.documentElement.scrollTop !== 0) return willDisplay = false;
     btn.style.display = "block"
-    setTimeout(() => btn.style.opacity = "1", 10)
-  }, 3000)
+    setTimeout(() => btn.style.opacity = "1", 50)
+  }, 2000)
 
   const handleScroll = () => {
     if(!willDisplay) return

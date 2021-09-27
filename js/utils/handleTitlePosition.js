@@ -4,6 +4,7 @@ export const handleTitlePosition = () => {
   const titleWrapper = document.querySelector("[data-js=title-wrapper]");
   const titleContainer = document.querySelector("[data-js=title-container]");
   const nav = document.querySelector("[data-js=nav]");
+  const description = document.querySelector("[data-js=description]");
 
   let isCentered = true;
 
@@ -17,10 +18,20 @@ export const handleTitlePosition = () => {
     const titleHeight = titleContainer.offsetHeight;
     const titleWidth = titleContainer.offsetWidth;
 
-    const offset = 100;
+    // Handle title scale
     let scale = 5;
     if(width < 1200) {
       scale = (width/250);
+    }
+
+    // Handle title offset
+    let offset = 100;
+    if (width < 576) {
+      offset = 160;
+    } else if (width < 768) {
+      offset = 140;
+    } else if (width < 992) {
+      offset = 120;
     }
 
     titleContainer.style.transform = `translate(${(width/2) - (titleWidth/2)}px, ${(height/2 - offset) - (titleHeight/2)}px) scale(${scale.toFixed(3)})`
