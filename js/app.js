@@ -4,6 +4,7 @@ import { mouseMoveReveal } from "./utils/mouseMoveReveal.js";
 import { handleProjectInfo } from "./utils/handleProjectInfo.js";
 import { handleDescriptionVisibility } from "./utils/handleDescriptionVisibility.js";
 import { handleParticleIntro } from "./utils/handleParticleIntro.js";
+import { handleFormSubmit } from "./utils/handleFormSubmit.js";
 
 const initIntro = () => {
   handleParticleIntro();
@@ -34,6 +35,8 @@ const init = () => {
   handleTitlePosition();
   // Handle project cards
   handleProjectInfo();
+  // Handle form submit
+  handleFormSubmit();
 
   // Handle title click
   const title = document.querySelector("[data-js=title-container]");
@@ -45,33 +48,7 @@ const init = () => {
   contact.addEventListener("click", () => {
     form.scrollIntoView({ behavior: "smooth" });
   })
-
-  // Handle contact form
-  // const form = document.querySelector("[data-js=form]");
-  // const formBtn = document.querySelector("[data-js=form-btn]");
-  // // inputs
-  // const nameInput = document.querySelector("[data-js=name-input]");
-  // const emailInput = document.querySelector("[data-js=email-input]");
-  // const messageInput = document.querySelector("[data-js=message-input]");
-  // form.addEventListener("submit", (e) => handleFormSubmit(e));
-  // formBtn.addEventListener("click", (e) => handleFormSubmit(e));
-
-  // const handleFormSubmit = (e) => {
-  //   e.preventDefault();
-  //   if(!validateForm()) return e.preventDefault();
-
-  // }
-  // const validateForm = () => {
-  //   if(
-  //     nameInput.value.length > 0 && 
-  //     emailInput.value.length > 0 &&
-  //     messageInput.value.length > 0
-  //     ) return true;
-  //   return false;
-  // }
 }
-
-
 
 // Init app
 init()

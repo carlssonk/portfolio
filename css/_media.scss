@@ -73,6 +73,7 @@
     .project-item-big {
       max-height: unset;
       height: fit-content;
+      height: -moz-max-content;
       min-height: 300px;
       .top-bar-wrapper {
         height: 40px;
