@@ -18,10 +18,12 @@ const initIntro = () => {
 // Init app
 const init = () => {
 
+  console.time();
   // Init text video when most of the text video has loaded
   const videoElement = document.querySelector("[data-js=video]");
   videoElement.addEventListener("canplaythrough", function() {
     handleStartTrack(videoElement);
+    console.timeEnd();
   }, {once: true});
 
   const initScroll = () => {
