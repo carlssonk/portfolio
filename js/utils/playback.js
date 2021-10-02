@@ -3,6 +3,7 @@ setTimeout(() => {
   if (!hasPlayed) handlePlaybackError();
 }, 2900);
 
+
 let hasPlayed = false;
 const handleStartTrack = async (event) => {
   if (hasPlayed === false) {
@@ -22,14 +23,14 @@ const handleStartTrack = async (event) => {
 const handlePlaybackError = () => {
   const video = document.querySelector("[data-js=video]");
   const container = document.querySelector("[data-js=svg-title-container]");
+  const gradientBackground = document.querySelector("[data-js=gradient-background]");
 
   hasPlayed = true;
-  if(video) video.src = "";
+  if(video) video.remove();
 
   container.innerHTML = createTitleElement();
 
-  const leakTitle = document.querySelector("[data-js=leak-title]");
-  leakTitle.style.fill = "#104b6d";
+  gradientBackground.style.display = "block";
 
   prepareIntroFast();
 };

@@ -19,20 +19,20 @@
         <header class="title-wrapper" data-js="title-wrapper">
           <div class="title-container" data-js="title-container">
             <svg height="100%" width="100%" data-js="svg-title-container" class="svg-title">
-                <defs>
-                  <mask id="mask" x="0" y="0" height="100%" width="100%">
-                    <rect fill="white" x="0" y="0" height="100%" width="100%" />
-                    <text
-                      class="leak-title"
-                      data-js="leak-title"
-                      x="50%"
-                      y="50%"
-                      text-anchor="middle"
-                    >
-                      Oliver Carlsson
-                    </text>
-                  </mask>
-                </defs>
+              <defs>
+                <mask id="mask" x="0" y="0" height="100%" width="100%">
+                  <rect fill="white" x="0" y="0" height="100%" width="100%" />
+                  <text
+                    class="leak-title"
+                    data-js="leak-title"
+                    x="50%"
+                    y="50%"
+                    text-anchor="middle"
+                  >
+                    Oliver Carlsson
+                  </text>
+                </mask>
+              </defs>
               <rect id="mask-bg" x="0" y="0" height="100%" width="100%" />
             </svg>
             <video
@@ -43,9 +43,11 @@
               playsinline
               muted
               loop
+              preload
               type="video/mp4"
               src="files/LEAK.mp4"
             ></video>
+            <div class="gradient-background" data-js="gradient-background"></div>
           </div>
           <div class="scroll-btn" data-js="scroll-btn">
             <i class="fas fa-angle-double-down"></i>
@@ -155,7 +157,7 @@
         </div>
       </div>
     </div>
-    
+
     <script src="/js/dist/particles.min.js"></script>
     <script type="module" src="js/app.js"></script>
   </body>
