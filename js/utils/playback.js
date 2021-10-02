@@ -5,11 +5,10 @@ setTimeout(() => {
 
 
 let hasPlayed = false;
-const handleStartTrack = async (event) => {
+const handleStartTrack = async (video) => {
   if (hasPlayed === false) {
     hasPlayed = true;
 
-    let video = event.target;
     video.onplay = null;
 
     // Start
@@ -22,13 +21,10 @@ const handleStartTrack = async (event) => {
 
 const handlePlaybackError = () => {
   const video = document.querySelector("[data-js=video]");
-  const container = document.querySelector("[data-js=svg-title-container]");
   const gradientBackground = document.querySelector("[data-js=gradient-background]");
 
   hasPlayed = true;
   if(video) video.remove();
-
-  container.innerHTML = createTitleElement();
 
   gradientBackground.style.display = "block";
 

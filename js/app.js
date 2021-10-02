@@ -18,6 +18,12 @@ const initIntro = () => {
 // Init app
 const init = () => {
 
+  // Init text video when most of the text video has loaded
+  const videoElement = document.querySelector("[data-js=video]");
+  videoElement.addEventListener("canplaythrough", function() {
+    handleStartTrack(videoElement);
+  }, {once: true});
+
   const initScroll = () => {
     // Enable scroll
     document.documentElement.style.overflowY = "scroll";
@@ -50,23 +56,9 @@ const init = () => {
   })
 }
 
-
 window.addEventListener("load", () => {
   // Init app
   init()
   // Init intro
   initIntro();
 })
-
-
-
-
-// PLAY VIDEO
-const videoElement = document.querySelector(".video");
-videoElement.addEventListener("canplaythrough", function() {
-  console.log("READY");
-});
-
-videoElement.oncanplay = function() {
-  console.log("CAN START PLAY");
-};
