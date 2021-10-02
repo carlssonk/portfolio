@@ -109,14 +109,23 @@
               <div class="project-description-wrapper">
                 <p class="project-description" data-js="project-description"></p>
               </div>
-              
               </p>
               <div class="links-container">
                 <a data-js="project-website" target="_blank"><i class="fas fa-globe"></i></a>
                 <a data-js="project-github" target="_blank"><i class="fab fa-github"></i></a>
               </div>
             </div>
-            <img data-js="project-background" src="" alt="project background image">
+            <div class="carousel-wrapper" data-js="carousel-wrapper" style="display: none;">
+              <div class="next-btn" data-js="carousel-next" data-value="1"><i class="fas fa-chevron-right"></i></div>
+              <div class="prev-btn" data-js="carousel-prev" data-value="-1"><i class="fas fa-chevron-left"></i></div>
+            </div>
+            <div class="background-overlay"></div>
+            <div class="background-wrapper" data-js="background-wrapper">
+              
+            </div>
+            <div class="video-wrapper" data-js="video-wrapper">
+
+            </div>
           </div>
           <div class="click-catcher" data-js="click-catcher" style="display: none"></div>
 
@@ -145,8 +154,8 @@
           <div class="sun-particle p4"></div>
         </div>
       </div>
-      
     </div>
+    
     <script src="/js/dist/particles.min.js"></script>
     <script type="module" src="js/app.js"></script>
   </body>

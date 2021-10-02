@@ -43,6 +43,27 @@ export default
       "github": "https://github.com/CarlssonK/Hemnet-clone"
     },
     "background": "https://camo.githubusercontent.com/13be2bb9f02a0e120c9a89745860bbaa985d7ab48d33ecb52fa82befcd53e702/68747470733a2f2f692e6962622e636f2f39484e7a7a6d722f68656d6e65742e6a7067",
+  },
+  "volvo": {
+    "name": "Volvo - 3D Model",
+    "type": "Project Type - Personal",
+    "date": "2020-12-22",
+    "description": "Volvo 245 (1933) 3D render made in Blender 2.91.",
+    "background": "./assets/volvo/car5-V2.png",
+    "images":
+    [
+      "./assets/volvo/car5-V2.png",
+      "./assets/volvo/car6.png",
+      "./assets/volvo/grill.png"
+    ],
+    "videos":
+    [
+      {
+        "id": "nY-Ah8HRPHg",
+        "time": 20000
+      }
+      
+    ],
   }
 
 }

@@ -343,6 +343,7 @@ body {
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      z-index: 1;
       .header {
         display: flex;
         justify-content: space-between;
@@ -405,8 +406,70 @@ body {
         bottom: 20px;
         right: 20px;
         height:  50px;
+        z-index: 1;
         a {
           margin: 0 14px;
+        }
+      }
+    }
+    .background-overlay {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      inset: 0;
+      z-index: 0;
+    }
+    .background-wrapper {
+      position: absolute;
+      display: flex;
+      inset: 0;
+      transition: 400ms;
+      img, iframe {
+        position: absolute;
+        inset: 0;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        object-position: unset;
+        z-index: -2;
+      }
+      iframe {
+        display: none;
+        background-color: black;
+      }
+    }
+    .carousel-wrapper {
+      position: absolute;
+      inset: 0;
+      .next-btn,.prev-btn {
+        position: absolute;
+        color: var(--light-alpha);
+        font-size: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+        transition: 200ms;
+        z-index: 2;
+        &:hover {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+      .next-btn {
+        right: 12px;
+      }
+      .prev-btn {
+        left: 12px;
+      }
+      .dots-wrapper {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        display: flex;
+        transform: translateX(-50%);
+        .dot {
+          width: 20px;
+          height: 4px;
+          background-color: var(--light-alpha);
+          margin: 0 4px;
         }
       }
     }

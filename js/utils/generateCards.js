@@ -15,10 +15,14 @@ export const generateCardsDOM = () => {
           </div>
           <div class="blur"></div>
         </div>
-        <div class="links-container">
-          <a data-js="project-icon" target="_blank" href="${x.links.website}"><i class="fas fa-globe"></i></a>
-          <a data-js="project-icon" target="_blank" href="${x.links.github}"><i class="fab fa-github"></i></a>
-        </div>
+        ${x.links ? (
+            `
+            <div class="links-container">
+              <a data-js="project-icon" target="_blank" href="${x.links.website}"><i class="fas fa-globe"></i></a>
+              <a data-js="project-icon" target="_blank" href="${x.links.github}"><i class="fab fa-github"></i></a>
+            </div>
+            `
+          ) : null}
         <img data-js="project-background" src="${x.background}" alt="project background image">
       </li>     
       `

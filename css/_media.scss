@@ -75,6 +75,18 @@
       height: fit-content;
       height: -moz-max-content;
       min-height: 300px;
+      .carousel-wrapper {
+        .next-btn,.prev-btn {
+          font-size: 24px;
+          padding: 12px;
+        }
+        .next-btn {
+          right: 8px;
+        }
+        .prev-btn {
+          left: 8px;
+        }
+      } 
       .top-bar-wrapper {
         height: 40px;
       }
@@ -128,6 +140,14 @@
     .project-item-big {
       min-height: unset;
       width: 96%;
+      .carousel-wrapper {
+        .next-btn {
+          right: 0px;
+        }
+        .prev-btn {
+          left: 0px;
+        }
+      }
       .top-bar-wrapper .top-bar label {
         font-size: 14px;
       }
@@ -202,6 +222,9 @@
       }
     }
     .project-item-big {
+      .background-wrapper img, .background-wrapper iframe {
+        object-fit: contain;
+      }
       .top-bar-wrapper .top-bar label {
         letter-spacing: unset;
       }
