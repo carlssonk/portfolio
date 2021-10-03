@@ -347,12 +347,13 @@ body {
     inset: 0;
     z-index: 51;
     left: 50%;
-    top: 50%;
+    top: calc(50% + var(--address-bar-height));
     width: 90%;
     height: 90%;
     max-width: 1337px;
     max-height: 668px;
     transform: translate(-50%, -50%);
+    transition: unset;
     .top-bar-wrapper {
       height: 10%;
       label {

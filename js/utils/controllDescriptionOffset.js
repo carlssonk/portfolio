@@ -1,15 +1,12 @@
 // Controlls window height for mobile browsers
-const actualHeight = window.innerHeight;
-let elementHeight = document.querySelector("[data-js=controll-height]").elementHeight
-export const controllDescriptionOffset = () => {
+export const controllDescriptionOffset = (controllElement) => {
 
   // Get element height
-  elementHeight = elementHeight.clientHeight;
+  const elementHeight = controllElement.clientHeight;
 
   // Get window browser address bar height
-  const barHeight = elementHeight - actualHeight;
+  const barHeight = elementHeight - window.innerHeight;
 
-  document.documentElement.style.setProperty("--address-bar-height", `${barHeight}px`)
+  document.documentElement.style.setProperty("--address-bar-height", `${barHeight/2}px`)
 
-  
 }

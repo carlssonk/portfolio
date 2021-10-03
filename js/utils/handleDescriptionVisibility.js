@@ -7,19 +7,20 @@ export const handleDescriptionVisibility = () => {
   const descriptionOverlay = document.querySelector("[data-js=description-overlay]");
   const projectsLabel = document.querySelector("[data-js=projects-label]");
 
-  if (isTouchDevice()) descriptionOverlay.style.dispaly = "none";
-
   description.classList.add("fade-in");
 
   const descriptionBottom = description.getBoundingClientRect().bottom;
   const descriptionHeight = description.offsetHeight;
 
-  if (isTouchDevice()) controllDescriptionOffset();
+  const controllElement = document.querySelector("[data-js=controll-height]");
+  controllDescriptionOffset(controllElement);
+
   const handleVisibility = () => {
 
-    // If is touch device, controll address bar height to set correct description offset.
-    if (isTouchDevice()) controllDescriptionOffset();
-    
+    if (isTouchDevice()) return controllDescriptionOffset(controllElement);
+
+    console.log("DONT GO")
+
     const labelTop = projectsLabel.getBoundingClientRect().top;
     const coverAmount = (descriptionBottom - (labelTop - 20)) / descriptionHeight
 
@@ -44,6 +45,15 @@ export const handleDescriptionVisibility = () => {
       descriptionOverlay.style.background = ``
     }
   }
+
+  if (isTouchDevice()) {
+    descriptionOverlay.style.display = "none";
+    const main = document.querySelector("[data-js=main]");
+    main.style.backgroundColor = "black";
+    main.style.background = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 98%, rgba(0,0,0,0) 100%)";
+    main.style.paddingTop = "40px";
+    description.style.zIndex = "2";
+  } 
 
   window.addEventListener('scroll', handleVisibility);
   window.addEventListener('resize', handleVisibility);
