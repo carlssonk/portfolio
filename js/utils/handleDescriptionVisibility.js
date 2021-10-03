@@ -19,8 +19,6 @@ export const handleDescriptionVisibility = () => {
 
     if (isTouchDevice()) return controllDescriptionOffset(controllElement);
 
-    console.log("DONT GO")
-
     const labelTop = projectsLabel.getBoundingClientRect().top;
     const coverAmount = (descriptionBottom - (labelTop - 20)) / descriptionHeight
 

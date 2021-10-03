@@ -1,3 +1,5 @@
+import { playback } from "./utils/playback.js";
+import { spinnerHTML } from "./utils/spinnerHTML.js";
 import { handleTitlePosition } from "./utils/handleTitlePosition.js";
 import { handleScrollBtn } from "./utils/handleScrollButton.js";
 import { mouseMoveReveal } from "./utils/mouseMoveReveal.js";
@@ -6,8 +8,17 @@ import { handleDescriptionVisibility } from "./utils/handleDescriptionVisibility
 import { handleParticleIntro } from "./utils/handleParticleIntro.js";
 import { handleFormSubmit } from "./utils/handleFormSubmit.js";
 
+
+
 const initIntro = () => {
   handleParticleIntro();
+
+  // Start spinner/loader
+  const spinnerWrapper = document.querySelector("[data-js=spinner-wrapper]");
+  spinnerWrapper.innerHTML = spinnerHTML();
+
+  console.log("START INTRO")
+
   // Remove spinner/loader
   setTimeout(() => {
     const spinner = document.querySelector("[data-js=spinner-box]")
@@ -18,12 +29,8 @@ const initIntro = () => {
 // Init app
 const init = () => {
 
-  // Init text video when most of the text video has loaded
-  const videoElement = document.querySelector("[data-js=video]");
-  console.log(videoElement)
-  videoElement && videoElement.addEventListener("canplaythrough", function() {
-    handleStartTrack(videoElement);
-  }, {once: true});
+  // Init playback first
+  // playback();
 
   const initScroll = () => {
     // Enable scroll
@@ -57,9 +64,11 @@ const init = () => {
   })
 }
 
+
 window.addEventListener("load", () => {
-  // Init app
-  init()
+  appHasInited = true;
   // Init intro
   initIntro();
+  // Init app
+  init()
 })
