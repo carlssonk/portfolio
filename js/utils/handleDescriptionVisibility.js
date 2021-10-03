@@ -1,15 +1,25 @@
+import { isTouchDevice } from "./checkDevice.js";
+import { controllDescriptionOffset } from "./controllDescriptionOffset.js";
+
 // Handles visibility of description text when scrolling
 export const handleDescriptionVisibility = () => {
   const description = document.querySelector("[data-js=description]");
   const descriptionOverlay = document.querySelector("[data-js=description-overlay]");
   const projectsLabel = document.querySelector("[data-js=projects-label]");
 
+  if (isTouchDevice()) descriptionOverlay.style.dispaly = "none";
+
   description.classList.add("fade-in");
 
   const descriptionBottom = description.getBoundingClientRect().bottom;
   const descriptionHeight = description.offsetHeight;
 
+  if (isTouchDevice()) controllDescriptionOffset();
   const handleVisibility = () => {
+
+    // If is touch device, controll address bar height to set correct description offset.
+    if (isTouchDevice()) controllDescriptionOffset();
+    
     const labelTop = projectsLabel.getBoundingClientRect().top;
     const coverAmount = (descriptionBottom - (labelTop - 20)) / descriptionHeight
 

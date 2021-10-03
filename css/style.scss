@@ -290,7 +290,7 @@ body {
   font-family: "Inter", sans-serif;
   left: 50%;
   top: calc(50% + 100px);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% + var(--address-bar-height)));
   color: rgba(255, 255, 255, 0.4);
   line-height: 20px;
   letter-spacing: 1px;

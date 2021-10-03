@@ -1,5 +1,8 @@
+import { isTouchDevice } from "./checkDevice.js";
 export const mouseMoveReveal = () => {
   const revealBox = document.querySelector("[data-js=reveal-box]");
+
+  if (isTouchDevice()) return revealBox.style.display = "none";
 
   revealBox.style.transform = `translate(${(window.innerWidth/2) - (window.innerWidth*1.25)}px, ${(window.innerHeight/2) - (window.innerHeight*1.25)}px)`;
 

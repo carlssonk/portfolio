@@ -1,4 +1,4 @@
-import { isMobile } from "./isMobile.js";
+import { isMobile } from "./checkDevice.js";
 
 export const handleParticleIntro = async () => {
 
