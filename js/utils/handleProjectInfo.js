@@ -1,5 +1,6 @@
 import projects from "../../assets/projects.js"
 import { generateCardsDOM } from "./generateCards.js";
+import { isTouchDevice } from "./checkDevice.js";
 // import { handleProjectCarousel } from "./handleProjectCarousel.js";
 // Handles hover and clicking on the project cards
 export const handleProjectInfo = () => {
@@ -11,6 +12,7 @@ export const handleProjectInfo = () => {
   const projectItemBig = document.querySelector("[data-js=project-item-big]");
   const clickCatcher = document.querySelector("[data-js=click-catcher]");
   const backgroundWrapper = document.querySelector("[data-js=background-wrapper]");
+  const backgroundOverlay = document.querySelector("[data-js=background-overlay]");
 
   const DOM = getItemDOM(projectItemBig);
 
@@ -28,6 +30,8 @@ export const handleProjectInfo = () => {
     card.addEventListener("click", () => {
       handleCardPopup(card.dataset.name);
     });
+
+    if (isTouchDevice()) return;
 
     let mouseOver = false;
     let hasIframe = false;
@@ -133,8 +137,9 @@ export const handleProjectInfo = () => {
 
   const fadeOutProjectItem = () => {
     projectItemBig.classList.add("scale-fade-out");
-    carouselWrapper.style.display = "none";
     setTimeout(() => {
+      carouselWrapper.style.display = "none";
+      backgroundOverlay.style.visibility = "visible";
       projectItemBig.classList.remove("scale-fade-out");
       projectItemBig.classList.remove("scale-fade-in");
       clearProjectItem();
@@ -173,7 +178,7 @@ export const handleProjectInfo = () => {
     if (data.images) {
       for (let i = 0; i < data.images.length; i++) {
         backgroundWrapper.insertAdjacentHTML("beforeend",`
-          <img class="slide ${!i && 'active'}" data-js="project-background" src="${data.images[i]}" alt="project background image">`);
+          <img class="slide ${!i ? 'active' : ''}" data-js="project-background" src="${data.images[i]}" alt="project background image">`);
       }
     }
 
@@ -242,6 +247,7 @@ export const handleProjectInfo = () => {
   let allSlides = [];
 
   const initCarousel = () => {
+    backgroundOverlay.style.visibility = "hidden";
     carouselWrapper.style.display = "block";
     allSlides = [...document.querySelectorAll('.slide')];
     currentIdx = 0;
@@ -250,7 +256,7 @@ export const handleProjectInfo = () => {
     allSlides.forEach(slide => {
       slide.setAttribute(
         'style',
-        `transition: transform ${SLIDETIME}ms ease; animation-duration: ${SLIDETIME}ms`,
+        `transition: transform ${SLIDETIME}ms ease; animation-duration: ${SLIDETIME}ms; filter: brightness(1)`,
       ),
       slide.addEventListener("animationend", () => handleSlideStopped(slide))
     });

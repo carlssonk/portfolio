@@ -16,7 +16,7 @@
       }
 
     }
-    .title-wrapper .scroll-btn {
+    .scroll-btn {
       top: 90%;
       }
   }
@@ -126,16 +126,17 @@
       font-size: 11px;
       max-width: 450px;
     }
-    .title-wrapper .scroll-btn {
+    .scroll-btn {
     font-size: 30px;
     }
     .main {
       .form-container {
         margin-top: 100px;
         .form {
-          margin: 40px auto 100px auto;
+          margin: 40px auto;
         }
       }
+      padding-bottom: 100px;
     }
     .project-item-big {
       min-height: unset;

@@ -87,6 +87,7 @@
     z-index: -1;
     transition: 400ms;
     opacity: 1;
+    filter: brightness(0.7);
   }
   .fade-out-project-background {
     opacity: 0 !important;
@@ -132,9 +133,9 @@
   &:hover .links-container i {
     transform: scale3d(2,2,2);
   }
-  // &:hover img {
-  //   opacity: 0.6;
-  // }
+  &:hover img {
+    filter: brightness(0.6);
+  }
 }
 
 
@@ -168,6 +169,7 @@
   animation: fadeIn 1s forwards;
   animation-delay: 100ms;
   z-index: 1;
+  pointer-events: none;
 }
 
 #controll-height {

@@ -22,7 +22,7 @@ export const generateCardsDOM = () => {
               <a data-js="project-icon" target="_blank" href="${x.links.github}"><i class="fab fa-github"></i></a>
             </div>
             `
-          ) : null}
+          ) : ''}
         <img data-js="project-background" src="${x.background}" alt="project background image">
       </li>     
       `

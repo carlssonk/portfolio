@@ -52,6 +52,7 @@ export const handleDescriptionVisibility = () => {
     main.style.paddingTop = "40px";
     description.style.zIndex = "2";
     document.querySelector("[data-js=title-wrapper]").style.pointerEvents = "none";
+    document.querySelector(".footer").style.backgroundColor = "black";
   } 
 
   window.addEventListener('scroll', handleVisibility);
