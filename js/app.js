@@ -64,7 +64,6 @@ const init = () => {
   })
 }
 
-
 window.addEventListener("load", () => {
   appHasInited = true;
   // Init intro
@@ -72,3 +71,9 @@ window.addEventListener("load", () => {
   // Init app
   init()
 })
+
+window.addEventListener("beforeunload", () => {
+  document.querySelector("#root").style.display = "none";
+  document.documentElement.style.overflowY = "hidden";
+  window.scrollTo(0, 0)
+});
