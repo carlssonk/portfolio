@@ -105,6 +105,8 @@ export const handleProjectInfo = () => {
     document.documentElement.style.overflowY = "hidden";
     document.documentElement.style.setProperty("--scroll-offset", "0px");
     document.documentElement.style.setProperty("--scroll-width", "8px");
+    document.documentElement.style.setProperty("--scroll-width", "8px");
+    document.documentElement.style.setProperty("touch-action", "none");
   }
 
   // Handle card popdown
@@ -124,6 +126,7 @@ export const handleProjectInfo = () => {
     document.documentElement.style.overflowY = "scroll";
     document.documentElement.style.setProperty("--scroll-offset", "8px");
     document.documentElement.style.setProperty("--scroll-width", "0px");
+    document.documentElement.style.setProperty("touch-action", "");
   }
 
   // Utils

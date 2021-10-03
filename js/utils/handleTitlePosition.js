@@ -29,16 +29,23 @@ export const handleTitlePosition = () => {
 
     // Handle title offset
     let offset = 100;
-    if (width < 576) {
+    let descOffset = -140;
+    if (width < 400) {
       offset = 130;
+      descOffset = -60;
+    } else if (width < 576) {
+      offset = 130;
+      descOffset = -70;
     } else if (width < 768) {
       offset = 120;
+      descOffset = -90;
     } else if (width < 992) {
       offset = 110;
+      descOffset = -110;
     }
 
     titleContainer.style.transform = `translate(${(width/2) - (titleWidth/2)}px, ${(height/2 - offset) - (titleHeight/2)}px) scale(${scale.toFixed(3)})`
-    description.style.transform = `translate(${(width/2) - (descriptionWidth/2)}px, ${(height/2 - (offset - 240)) - (descriptionHeight/2)}px)`
+    description.style.transform = `translate(${(width/2) - (descriptionWidth/2)}px, ${(height/2 - descOffset) - (descriptionHeight/2)}px)`
   }
   centerTitlePos();
   window.onresize = centerTitlePos;
