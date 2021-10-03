@@ -18,6 +18,9 @@ export const handleTitlePosition = () => {
     const titleHeight = titleContainer.offsetHeight;
     const titleWidth = titleContainer.offsetWidth;
 
+    const descriptionHeight = description.offsetHeight;
+    const descriptionWidth = description.offsetWidth;
+
     // Handle title scale
     let scale = 5;
     if(width < 1200) {
@@ -35,6 +38,7 @@ export const handleTitlePosition = () => {
     }
 
     titleContainer.style.transform = `translate(${(width/2) - (titleWidth/2)}px, ${(height/2 - offset) - (titleHeight/2)}px) scale(${scale.toFixed(3)})`
+    description.style.transform = `translate(${(width/2) - (descriptionWidth/2)}px, ${(height/2 - (offset - 240)) - (descriptionHeight/2)}px)`
   }
   centerTitlePos();
   window.onresize = centerTitlePos;

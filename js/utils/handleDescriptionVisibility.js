@@ -51,6 +51,7 @@ export const handleDescriptionVisibility = () => {
     main.style.background = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 98%, rgba(0,0,0,0) 100%)";
     main.style.paddingTop = "40px";
     description.style.zIndex = "2";
+    document.querySelector("[data-js=title-wrapper]").style.pointerEvents = "none";
   } 
 
   window.addEventListener('scroll', handleVisibility);

@@ -288,9 +288,10 @@ body {
   font-size: 14px;
   position: fixed;
   font-family: "Inter", sans-serif;
-  left: 50%;
-  top: calc(50% + 100px);
-  transform: translate(-50%, calc(-50% + var(--address-bar-height)));
+  // left: 50%;
+  // top: calc(50% + 100px);
+  // transform: translate(-50%, calc(-50% + var(--address-bar-height)));
+  inset: 0;
   color: rgba(255, 255, 255, 0.4);
   line-height: 20px;
   letter-spacing: 1px;
