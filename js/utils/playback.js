@@ -24,6 +24,7 @@ const handlePlaybackError = () => {
   const gradientBackground = document.querySelector("[data-js=gradient-background]");
 
   hasPlayed = true;
+  console.log(video, " REMOVE?")
   if(video) video.remove();
 
   gradientBackground.style.display = "block";

@@ -20,7 +20,8 @@ const init = () => {
 
   // Init text video when most of the text video has loaded
   const videoElement = document.querySelector("[data-js=video]");
-  videoElement.addEventListener("canplaythrough", function() {
+  console.log(videoElement)
+  videoElement && videoElement.addEventListener("canplaythrough", function() {
     handleStartTrack(videoElement);
   }, {once: true});
 
