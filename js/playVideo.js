@@ -16,7 +16,7 @@ let appHasInited = false;
 
 async function playVideo(e) {
   if (videoHasInited) return;
-  hasInited = true;
+  videoHasInited = true;
   videoIsSuccessful = true;
 
   const video = e.target

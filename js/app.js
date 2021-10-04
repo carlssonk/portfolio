@@ -1,4 +1,4 @@
-import { playback } from "./utils/playback.js";
+import { handleVideoError } from "./utils/handleVideoError.js";
 import { spinnerHTML } from "./utils/spinnerHTML.js";
 import { handleTitlePosition } from "./utils/handleTitlePosition.js";
 import { handleScrollBtn } from "./utils/handleScrollButton.js";
@@ -23,6 +23,8 @@ const initIntro = () => {
     spinner.classList.add("scale-out")
     // Handle project cards and load images
     handleProjectInfo();
+    // remove video if it has not been downloaded
+    if (!videoIsSuccessful) handleVideoError();
   }, 2200)
 }
 
