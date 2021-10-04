@@ -17,20 +17,17 @@ const initIntro = () => {
   const spinnerWrapper = document.querySelector("[data-js=spinner-wrapper]");
   spinnerWrapper.innerHTML = spinnerHTML();
 
-  console.log("START INTRO")
-
   // Remove spinner/loader
   setTimeout(() => {
     const spinner = document.querySelector("[data-js=spinner-box]")
     spinner.classList.add("scale-out")
+    // Handle project cards and load images
+    handleProjectInfo();
   }, 2200)
 }
 
 // Init app
 const init = () => {
-
-  // Init playback first
-  // playback();
 
   const initScroll = () => {
     // Enable scroll
@@ -47,8 +44,6 @@ const init = () => {
   mouseMoveReveal();
   // Handle title position
   handleTitlePosition();
-  // Handle project cards
-  handleProjectInfo();
   // Handle form submit
   handleFormSubmit();
 
@@ -58,7 +53,7 @@ const init = () => {
 
   // Handle contact text click
   const contact = document.querySelector("[data-js=contact]");
-  const form = document.querySelector("[data-js=form]");
+  const form = document.querySelector("[data-js=form-anchor]");
   contact.addEventListener("click", () => {
     form.scrollIntoView({ behavior: "smooth" });
   })

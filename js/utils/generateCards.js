@@ -23,7 +23,7 @@ export const generateCardsDOM = () => {
             </div>
             `
           ) : ''}
-        <img data-js="project-background" src="${x.background}" alt="project background image">
+        <img data-js="project-background" loading="lazy" src="${x.background}" alt="project background image">
       </li>     
       `
     )

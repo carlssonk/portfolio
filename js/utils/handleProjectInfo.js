@@ -256,7 +256,7 @@ export const handleProjectInfo = () => {
     allSlides.forEach(slide => {
       slide.setAttribute(
         'style',
-        `transition: transform ${SLIDETIME}ms ease; animation-duration: ${SLIDETIME}ms; filter: brightness(1)`,
+        `transition: transform ${SLIDETIME}ms ease; animation-duration: ${SLIDETIME}ms; filter: unset`,
       ),
       slide.addEventListener("animationend", () => handleSlideStopped(slide))
     });
