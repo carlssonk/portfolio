@@ -17,7 +17,7 @@ export default
     "date": "2021-09-05",
     "description": "Bopshop is a trendy e-commerce clothing website for young audults. I worked together with 5 classmates in an agile development process where we had a total of 2 sprints, each sprint lasting 2 weeks. My main responsibilities consisted of: Setting up an Express server with cookies/sessions, managing routes and controllers, setting up a MongoDB database, creating the product; checkout; wishlist; pages, making the website compatible with Electron.js and deploying the website with Digital Ocean. \n\n Bopshop does not include any actual payment methods to buy stuff, but we made sure that the user flow gives a realistic example of how an expereince should be when doing different tasks, like purcharing products. \n\nBopshop is made with Vite React.js, Sass, Express.js, MongoDB, Mongoose, Electron.js.",
     "links": {
-      "website": "https://bopshop.xyz/",
+      "website": "https://bopshop-store.herokuapp.com/",
       "github": "https://github.com/Sifon98/AgilLeverans"
     },
     "background": "./assets/bopshop_background.jpg",
