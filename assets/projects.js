@@ -1,5 +1,16 @@
 export default
 {
+  "flare": {
+    "name": "Flare - Messenger",
+    "type": "Project Type - Personal",
+    "date": "2021-06-18",
+    "description": "Flare - Messenger is a messenger app built with web technologies. It's inspired by many of the popular messaging and social media apps we use today such as Facebook Messenger, WhatsApp, Snapchat and Instagram. I built this app as a hobby project because I wanted a place I could send messages through 1 app, no matter which device or browser im using, the goal is to make a messenger app as accessible as possible. Some features includes private- and group-chats, custom profile, photo uploads, gif-files, in-app camera. I built this app using React.js, Scss, Ionic Framework, Socket.io, Express.js & MongoDB",
+    "links": {
+      "website": "https://flare-messenger.com/",
+      "github": "https://github.com/CarlssonK/flare"
+    },
+    "background": "./assets/flare_background1.jpg",
+  },
   "blackjack": {
     "name": "Blackjack Multiplayer Online",
     "type": "Project Type - Personal",
@@ -54,6 +65,17 @@ export default
       "github": "https://github.com/CarlssonK/Hemnet-clone"
     },
     "background": "./assets/hemnet_background.jpg",
+  },
+  "portfolio": {
+    "name": "Portfolio",
+    "type": "Project Type - Personal",
+    "date": "2021-09-08",
+    "description": "This is the website you are viewing right now! I built this website for me to keep track and showcaase my projects i've worked on thorughout my career. It's built using Vanilla JavaScript, Scss and a cool library called <a href='https://vincentgarreau.com/particles.js/' target='_blank'>particles.js</a>",
+    "links": {
+      "website": "https://www.carlssonk.com/",
+      "github": "https://github.com/CarlssonK/portfolio"
+    },
+    "background": "./assets/preview_background.jpg",
   },
   "volvo": {
     "name": "Volvo - 3D Model",
