@@ -51,7 +51,7 @@ const init = () => {
 
   // Handle title click
   const title = document.querySelector("[data-js=title-container]");
-  title.addEventListener("click", () => window.scrollTo({top: 0, left: 0, behavior: "smooth"}))
+  title.addEventListener("click", () => window.scrollTo({ top: 0, left: 0, behavior: "smooth" }))
 
   // Handle contact text click
   const contact = document.querySelector("[data-js=contact]");
@@ -59,6 +59,9 @@ const init = () => {
   contact.addEventListener("click", () => {
     form.scrollIntoView({ behavior: "smooth" });
   })
+
+  // Handle set footer current year
+  document.querySelector("#current-year").innerText = new Date().getFullYear();
 }
 
 window.addEventListener("load", () => {

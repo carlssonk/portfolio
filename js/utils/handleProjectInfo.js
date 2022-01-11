@@ -39,12 +39,12 @@ export const handleProjectInfo = () => {
     card.addEventListener("mouseenter", () => {
       mouseOver = true;
       const videos = projects[card.dataset.name].videos
-      
+
       // Prepare iframe video
       setTimeout(() => {
         if (mouseOver && videos) {
-          card.insertAdjacentHTML("beforeend", 
-          `<iframe class="iframe-preview" src="https://www.youtube-nocookie.com/embed/${videos[0].id}?autoplay=1&mute=1&controls=0" allowfullscreen></iframe>`)
+          card.insertAdjacentHTML("beforeend",
+            `<iframe class="iframe-preview" src="https://www.youtube-nocookie.com/embed/${videos[0].id}?autoplay=1&mute=1&controls=0" allowfullscreen></iframe>`)
           hasIframe = true;
           iframeTimeout = setTimeout(() => {
             removePreviewIframe(card, hasIframe);
@@ -58,15 +58,15 @@ export const handleProjectInfo = () => {
           card.style.transform = "scale3d(1.1,1.1,1.1)";
 
           // Fade out image
-          if(videos) {
+          if (videos) {
             setTimeout(() => {
               card.querySelector("[data-js=project-background]").classList.add("fade-out-project-background")
             }, 300)
           }
-        } 
+        }
       }, 1000)
 
-      
+
     })
     // gny4B5YOV0s
     // <iframe class="iframe-preview"
@@ -89,10 +89,10 @@ export const handleProjectInfo = () => {
       const background = card.querySelector("[data-js=project-background]");
       background.classList.add("fade-in-project-background");
       setTimeout(() => {
-        const iframes =  document.querySelectorAll(".iframe-preview")
+        const iframes = document.querySelectorAll(".iframe-preview")
         iframes.forEach(elm => elm.remove());
         background.classList.remove("fade-in-project-background", "fade-out-project-background");
-      }, 400) 
+      }, 400)
     }
   }
 
@@ -100,7 +100,7 @@ export const handleProjectInfo = () => {
 
   // Handle card popup
   let isAnimating = false;
-  const handleCardPopup = (name) => { 
+  const handleCardPopup = (name) => {
     populateProjectItem(name);
     setIsAnimating();
     clickCatcher.classList.add("enable-click-catcher");
@@ -177,7 +177,7 @@ export const handleProjectInfo = () => {
     // Populate images
     if (data.images) {
       for (let i = 0; i < data.images.length; i++) {
-        backgroundWrapper.insertAdjacentHTML("beforeend",`
+        backgroundWrapper.insertAdjacentHTML("beforeend", `
           <img class="slide ${!i ? 'active' : ''}" data-js="project-background" src="${data.images[i]}" alt="project background image">`);
       }
     }
@@ -185,7 +185,7 @@ export const handleProjectInfo = () => {
     // Populate images
     if (data.videos) {
       for (let i = 0; i < data.videos.length; i++) {
-        backgroundWrapper.insertAdjacentHTML("beforeend",`
+        backgroundWrapper.insertAdjacentHTML("beforeend", `
         <iframe 
           class="slide" 
 
@@ -195,7 +195,7 @@ export const handleProjectInfo = () => {
             <span>▶</span>
           </a>"
           frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
-      }     
+      }
     }
 
     // Populate default background if has no images nor videos
@@ -258,7 +258,7 @@ export const handleProjectInfo = () => {
         'style',
         `transition: transform ${SLIDETIME}ms ease; animation-duration: ${SLIDETIME}ms; filter: unset`,
       ),
-      slide.addEventListener("animationend", () => handleSlideStopped(slide))
+        slide.addEventListener("animationend", () => handleSlideStopped(slide))
     });
 
   }

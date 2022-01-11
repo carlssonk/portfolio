@@ -1,152 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="portfolio, oliver carlsson, oliver, carlsson, space">
-    <meta property="og:title" content="carlssonk.com">
-    <meta property="og:url" content="https://www.carlssonk.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/preview_background.jpg">
-    <link rel="stylesheet" href="./css/style.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&family=Roboto:wght@100;300;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>carlssonk.com</title>
-    <link rel="icon" href="/assets/tab_icon.svg">
-    <script src="/js/playVideo.js"></script>
-  </head>
-  <body>
-    <div id="root">
-      <div class="app">
-        <nav class="nav" data-js="nav"></nav>
-        <header class="title-wrapper" data-js="title-wrapper">
-          <div class="title-container" data-js="title-container">
-            <svg height="100%" width="100%" data-js="svg-title-container" class="svg-title">
-              <defs>
-                <mask id="mask" x="0" y="0" height="100%" width="100%">
-                  <rect fill="white" x="0" y="0" height="100%" width="100%" />
-                  <text
-                    class="leak-title"
-                    x="50%"
-                    y="50%"
-                    text-anchor="middle"
-                  >
-                    Oliver Carlsson
-                  </text>
-                </mask>
-              </defs>
-              <rect id="mask-bg" x="0" y="0" height="100%" width="100%" />
-            </svg>
-            <video
-              class="video"
-              data-js="video"
-              autoplay
-              playsinline
-              muted
-              loop
-              oncanplaythrough="playVideo(event)"
-              type="video/mp4"
-              src="files/LEAK_COMPRESSED.mp4"
-            ></video>
-            <div class="gradient-background" data-js="gradient-background"></div>
-          </div>
-        </header>
-        <div class="scroll-btn" data-js="scroll-btn">
-          <i class="fas fa-angle-double-down"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="portfolio, oliver carlsson, oliver, carlsson, space">
+  <meta property="og:title" content="carlssonk.com">
+  <meta property="og:url" content="https://www.carlssonk.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/preview_background.jpg">
+  <link rel="stylesheet" href="./css/style.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&family=Roboto:wght@100;300;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>carlssonk.com</title>
+  <link rel="icon" href="/assets/tab_icon.svg">
+  <script src="/js/playVideo.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <div class="app">
+      <nav class="nav" data-js="nav"></nav>
+      <header class="title-wrapper" data-js="title-wrapper">
+        <div class="title-container" data-js="title-container">
+          <svg height="100%" width="100%" data-js="svg-title-container" class="svg-title">
+            <defs>
+              <mask id="mask" x="0" y="0" height="100%" width="100%">
+                <rect fill="white" x="0" y="0" height="100%" width="100%" />
+                <text class="leak-title" x="50%" y="50%" text-anchor="middle">
+                  Oliver Carlsson
+                </text>
+              </mask>
+            </defs>
+            <rect id="mask-bg" x="0" y="0" height="100%" width="100%" />
+          </svg>
+          <video class="video" data-js="video" autoplay playsinline muted loop oncanplaythrough="playVideo(event)"
+            type="video/mp4" src="files/LEAK_COMPRESSED.mp4"></video>
+          <div class="gradient-background" data-js="gradient-background"></div>
         </div>
-        <main class="main" data-js="main">
-          <div class="projects-container section">
-            <h1 class="label" data-js="projects-label">Projects</h1>
-            <ul data-js="projects-list">
-            </ul>
-          </div>
-          <div class="form-container section">
-            <div data-js="form-anchor" style="position: absolute; top: -100px; left: 0"></div>
-            <h1 class="label">Contact</h1>
-
-            <form data-js="form" class="form" accept-charset="utf-8" action="https://formspree.io/f/xjvjldlj" method="POST">
-              <input data-js="name-input" type="text" name="name" id="full-name" placeholder="Name" required>
-              <input data-js="email-input" type="email" name="_replyto" id="email-address" placeholder="Email" required>
-              <textarea data-js="message-input" rows="10" name="message" id="message" placeholder="Message" required></textarea>
-              <button class="submit" data-js="form-btn" type="submit">Submit</button>
-            </form>
-
-          </div>
-        </main>
-        <footer class="footer">
-          <div class="copyright">
-            <i class="far fa-copyright"></i>
-            Oliver Carlsson 2021
-          </div>
-        </footer>
-
-        <div class="description" data-js="description">
-          <div class="overlay" data-js="description-overlay"></div>
-          <p class="section">
-            I'm a <span class="emphasize">Web Developer</span> specializing in Frontend, currently based in Stockholm, Sweden. I
-            enjoy the art of building clean software, as well as robust & user-friendly UI for other people to use. 
-          </p>
-          <p class="section">
-            I'm currently studying Frontend development whilst working on personal projects. 
-            One of the fascinating things I really enjoy about building software is solving interesting problems. Feel free to <span class="contact" data-js="contact">contact</span> me to ask questions or share your problems. I would love to hear it!
-          </p>
-          <ul class="social-media-list">
-            <li tabindex="1"><a href="https://github.com/CarlssonK" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li tabindex="2"><a href="https://codepen.io/CarlssonK" target="_blank"><i class="fab fa-codepen"></i></a></li>
-            <li tabindex="3"><a href="https://www.linkedin.com/in/olivercarlsson/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+      </header>
+      <div class="scroll-btn" data-js="scroll-btn">
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+      <main class="main" data-js="main">
+        <div class="projects-container section">
+          <h1 class="label" data-js="projects-label">Projects</h1>
+          <ul data-js="projects-list">
           </ul>
         </div>
+        <div class="form-container section">
+          <div data-js="form-anchor" style="position: absolute; top: -100px; left: 0"></div>
+          <h1 class="label">Contact</h1>
 
-          <div class="project-item project-item-big" data-js="project-item-big">
-            <div class="top-bar-wrapper">
-              <div class="top-bar">
-                <label data-js="project-label"></label>
-                <i tabindex="0" data-js="project-exit" class="fas fa-times info-icon"></i>
-              </div>
-              <div class="blur"></div>
-            </div>
-            <div class="content">
-              <div class="header"> 
-                <h2 class="project-type" data-js="project-type"></h2>
-                <div class="date" data-js="project-date"></div>
-              </div>
-              <div class="project-description-wrapper">
-                <p class="project-description" data-js="project-description"></p>
-              </div>
-              </p>
-              <div class="links-container">
-                <a data-js="project-website" target="_blank"><i class="fas fa-globe"></i></a>
-                <a data-js="project-github" target="_blank"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <div class="carousel-wrapper" data-js="carousel-wrapper" style="display: none;">
-              <div class="next-btn" data-js="carousel-next" data-value="1"><i class="fas fa-chevron-right"></i></div>
-              <div class="prev-btn" data-js="carousel-prev" data-value="-1"><i class="fas fa-chevron-left"></i></div>
-            </div>
-            <div class="background-overlay" data-js="background-overlay"></div>
-            <div class="background-wrapper" data-js="background-wrapper">
-              
-            </div>
-            <div class="video-wrapper" data-js="video-wrapper">
+          <form data-js="form" class="form" accept-charset="utf-8" action="https://formspree.io/f/xjvjldlj"
+            method="POST">
+            <input data-js="name-input" type="text" name="name" id="full-name" placeholder="Name" required>
+            <input data-js="email-input" type="email" name="_replyto" id="email-address" placeholder="Email" required>
+            <textarea data-js="message-input" rows="10" name="message" id="message" placeholder="Message"
+              required></textarea>
+            <button class="submit" data-js="form-btn" type="submit">Submit</button>
+          </form>
 
-            </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          <i class="far fa-copyright"></i>
+          Oliver Carlsson <span id="current-year"></span>
+        </div>
+      </footer>
+
+      <div class="description" data-js="description">
+        <div class="overlay" data-js="description-overlay"></div>
+        <p class="section">
+          I'm a <span class="emphasize">Web Developer</span> specializing in Frontend, currently based in Stockholm,
+          Sweden. I
+          enjoy the art of building clean software, as well as robust & user-friendly UI for other people to use.
+        </p>
+        <p class="section">
+          I'm currently studying Frontend development whilst working on personal projects.
+          One of the fascinating things I really enjoy about building software is solving interesting problems. Feel
+          free to <span class="contact" data-js="contact">contact</span> me to ask questions or share your problems. I
+          would love to hear it!
+        </p>
+        <ul class="social-media-list">
+          <li tabindex="1"><a href="https://github.com/CarlssonK" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li tabindex="2"><a href="https://codepen.io/CarlssonK" target="_blank"><i class="fab fa-codepen"></i></a>
+          </li>
+          <li tabindex="3"><a href="https://www.linkedin.com/in/olivercarlsson/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="project-item project-item-big" data-js="project-item-big">
+        <div class="top-bar-wrapper">
+          <div class="top-bar">
+            <label data-js="project-label"></label>
+            <i tabindex="0" data-js="project-exit" class="fas fa-times info-icon"></i>
           </div>
-          <div class="click-catcher" data-js="click-catcher" style="display: none"></div>
+          <div class="blur"></div>
+        </div>
+        <div class="content">
+          <div class="header">
+            <h2 class="project-type" data-js="project-type"></h2>
+            <div class="date" data-js="project-date"></div>
+          </div>
+          <div class="project-description-wrapper">
+            <p class="project-description" data-js="project-description"></p>
+          </div>
+          </p>
+          <div class="links-container">
+            <a data-js="project-website" target="_blank"><i class="fas fa-globe"></i></a>
+            <a data-js="project-github" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="carousel-wrapper" data-js="carousel-wrapper" style="display: none;">
+          <div class="next-btn" data-js="carousel-next" data-value="1"><i class="fas fa-chevron-right"></i></div>
+          <div class="prev-btn" data-js="carousel-prev" data-value="-1"><i class="fas fa-chevron-left"></i></div>
+        </div>
+        <div class="background-overlay" data-js="background-overlay"></div>
+        <div class="background-wrapper" data-js="background-wrapper">
 
-        <div class="reveal-box" data-js="reveal-box"></div>
-        <div id="particles-js"></div>
+        </div>
+        <div class="video-wrapper" data-js="video-wrapper">
+
+        </div>
       </div>
+      <div class="click-catcher" data-js="click-catcher" style="display: none"></div>
 
-      <div id="controll-height" data-js="controll-height"></div>
-
-      <div data-js="spinner-wrapper">
-
-      </div>
+      <div class="reveal-box" data-js="reveal-box"></div>
+      <div id="particles-js"></div>
     </div>
-    <script src="/js/dist/particles.min.js"></script>
-    <script type="module" src="js/app.js"></script>
-  </body>
+
+    <div id="controll-height" data-js="controll-height"></div>
+
+    <div data-js="spinner-wrapper">
+
+    </div>
+  </div>
+  <script src="/js/dist/particles.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+
 </html>
