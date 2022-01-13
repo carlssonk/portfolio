@@ -8,7 +8,7 @@ import { handleDescriptionVisibility } from "./utils/handleDescriptionVisibility
 import { handleParticleIntro } from "./utils/handleParticleIntro.js";
 import { handleFormSubmit } from "./utils/handleFormSubmit.js";
 
-
+import "../css/style.scss"
 
 const initIntro = () => {
   handleParticleIntro();

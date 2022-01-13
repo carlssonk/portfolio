@@ -5,7 +5,7 @@ export const generateCardsDOM = () => {
 
   for (let name in projects) {
     const x = projects[name];
-    list.insertAdjacentHTML("beforeend", 
+    list.insertAdjacentHTML("beforeend",
       `
       <li class="project-item" data-js="project-item" data-name="${name}">
         <div class="top-bar-wrapper">
@@ -16,13 +16,13 @@ export const generateCardsDOM = () => {
           <div class="blur"></div>
         </div>
         ${x.links ? (
-            `
+        `
             <div class="links-container">
               <a data-js="project-icon" target="_blank" href="${x.links.website}"><i class="fas fa-globe"></i></a>
               <a data-js="project-icon" target="_blank" href="${x.links.github}"><i class="fab fa-github"></i></a>
             </div>
             `
-          ) : ''}
+      ) : ''}
         <img data-js="project-background" loading="lazy" src="${x.background}" alt="project background image">
       </li>     
       `
