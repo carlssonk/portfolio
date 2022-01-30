@@ -7,6 +7,7 @@ import { handleProjectInfo } from "./utils/handleProjectInfo.js";
 import { handleDescriptionVisibility } from "./utils/handleDescriptionVisibility.js";
 import { handleParticleIntro } from "./utils/handleParticleIntro.js";
 import { handleFormSubmit } from "./utils/handleFormSubmit.js";
+import { playVideo, setAppHasInited, videoIsSuccessful } from "./playVideo.js";
 
 import "../css/style.scss"
 
@@ -65,7 +66,7 @@ const init = () => {
 }
 
 window.addEventListener("load", () => {
-  appHasInited = true;
+  setAppHasInited(true)
   // Init intro
   initIntro();
   // Init app
@@ -77,3 +78,10 @@ window.addEventListener("beforeunload", () => {
   document.documentElement.style.overflowY = "hidden";
   window.scrollTo(0, 0)
 });
+
+
+// Init video
+const video = document.querySelector("[data-js=video]")
+video.oncanplaythrough = function (event) {
+  playVideo(event);
+}

@@ -271,7 +271,6 @@ export const handleProjectInfo = () => {
 
     // Pause video when switching to another slide
     if (active.tagName === "IFRAME") {
-      console.log(active)
       active.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
     }
 

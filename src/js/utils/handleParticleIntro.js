@@ -6,7 +6,7 @@ export const handleParticleIntro = async () => {
 
 
   // Load particles
-  particlesJS.load('particles-js', '../assets/particles.json');
+  particlesJS.load('particles-js', './assets/particles.json');
 
   // IF pJSDom is NOT loaded, Wait for pJSDom to load
   const waitUntilLoaded = async () => {
