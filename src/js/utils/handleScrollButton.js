@@ -9,21 +9,20 @@ export const handleScrollBtn = () => {
   const scrollOffset = window.innerWidth < 400 ? 70 : 120;
 
   btn.addEventListener("click", () => {
-    document.documentElement.scrollTo({top: titleWrapper.offsetHeight - scrollOffset, behavior: 'smooth'});
+    document.documentElement.scrollTo({ top: titleWrapper.offsetHeight - scrollOffset, behavior: 'smooth' });
   })
 
-  // console.log("SHOW?")
   setTimeout(() => {
-    if(document.documentElement.scrollTop !== 0) return willDisplay = false;
+    if (document.documentElement.scrollTop !== 0) return willDisplay = false;
     btn.style.display = "block"
     setTimeout(() => btn.style.opacity = "1", 50)
   }, 2000)
 
   const handleScroll = () => {
-    if(!willDisplay) return
+    if (!willDisplay) return
     btn.style.opacity = ""
-    setTimeout(() => btn.style.display = "" , 1000);
+    setTimeout(() => btn.style.display = "", 1000);
   }
-  
+
   window.onscroll = handleScroll;
 }

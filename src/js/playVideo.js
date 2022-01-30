@@ -1,20 +1,23 @@
-
 // When this countdown hits 0 we should show the title
 let timeUntilStart = 2700;
 
 let countdown = setInterval(() => {
   timeUntilStart -= 100;
-  if(timeUntilStart <= 0) clearInterval(countdown)
+  if (timeUntilStart <= 0) clearInterval(countdown)
 }, 100);
 
 // Variable that checks that we have played the video
-let videoIsSuccessful = false;
+export let videoIsSuccessful = false;
 // We only need to init function once, because somehow oncanplaythough fires multiple times, maybe because video is set on loop
 let videoHasInited = false;
+export const setVideoHasInited = (bool) => videoHasInited = bool;
 // Global variable that will become true in app.js when page is fully loaded
-let appHasInited = false;
+export let appHasInited = false;
+export const setAppHasInited = (bool) => appHasInited = bool;
 
-async function playVideo(e) {
+
+
+export async function playVideo(e) {
   if (videoHasInited) return;
   videoHasInited = true;
   videoIsSuccessful = true;
@@ -49,3 +52,5 @@ async function playVideo(e) {
   revealTitle();
 
 }
+
+
